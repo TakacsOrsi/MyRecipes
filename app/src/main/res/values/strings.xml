@@ -4,11 +4,15 @@
     <string name="action_week">Week</string>
     <string name="action_shoppinglist">Shopping list</string>
     <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
+    <string name="day_fragment_label">DayFragment</string>
+    <string name="food_fragment_label">FoodFragment</string>
+    <string name="shoppinglist_fragment_label">ShoppingListFragment</string>
+    <string name="week_fragment_label">WeekFragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="day_fragment_hello">Hello dayfragment</string>
+    <string name="food_fragment_hello">Hello foodfragment.</string>
+    <string name="week_fragment_hello">Hello weekfragment.</string>
+    <string name="shoppinglist_fragment_hello">Hello shoppinglistfragment.</string>
 </resources>

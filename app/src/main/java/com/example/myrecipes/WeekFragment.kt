@@ -6,14 +6,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.example.myrecipes.databinding.FoodFragmentBinding
+import com.example.myrecipes.databinding.WeekFragmentBinding
 
 /**
- * A simple [Fragment] subclass as the second destination in the navigation.
+ * A simple [Fragment] subclass as the default destination in the navigation.
  */
-class FoodFragment : Fragment() {
+class WeekFragment : Fragment() {
 
-    private var _binding: FoodFragmentBinding? = null
+    private var _binding:WeekFragmentBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -24,7 +24,7 @@ class FoodFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        _binding = FoodFragmentBinding.inflate(inflater, container, false)
+        _binding = WeekFragmentBinding.inflate(inflater, container, false)
         return binding.root
 
     }
@@ -32,8 +32,8 @@ class FoodFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.buttonSecond.setOnClickListener {
-            findNavController().navigate(R.id.action_FoodFragment_to_DayFragment)
+        binding.buttonFirst.setOnClickListener {
+            findNavController().navigate(R.id.action_DayFragment_to_FoodFragment)
         }
     }
 

@@ -4,19 +4,14 @@
     tools:context="com.example.myrecipes.MainActivity">
 
     <item
-        android:id="@+id/action_week"
+        android:id="@+id/week_fragment"
         android:orderInCategory="100"
         android:title="@string/action_week"
         app:showAsAction="never" />
     <item
-        android:id="@+id/action_shoppinglist"
+        android:id="@+id/shoppinglist_fragment"
         android:orderInCategory="100"
         android:title="@string/action_shoppinglist"
-        app:showAsAction="never" />
-    <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:title="@string/action_settings"
         app:showAsAction="never" />
 
 </menu>
