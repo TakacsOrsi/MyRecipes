@@ -9,6 +9,7 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
 import com.example.myrecipes.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -45,10 +46,23 @@ class MainActivity : AppCompatActivity() {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         return when (item.itemId) {
-            R.id.action_settings -> true
+            R.id.action_settings -> {
+                Toast.makeText(this, "Settings Clicked", Toast.LENGTH_LONG)
+                    .show()
+                true
+            }
+            R.id.action_week -> {
+                Toast.makeText(this, "WeekFragment Clicked", Toast.LENGTH_LONG)
+                    .show()
+                true
+            }
+            R.id.action_shoppinglist->{Toast.makeText(this,"shoppinglist clicked",Toast.LENGTH_LONG).show()
+            true}
+
             else -> super.onOptionsItemSelected(item)
         }
     }
+
 
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment_content_main)
