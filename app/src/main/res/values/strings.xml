@@ -12,7 +12,7 @@
     <string name="previous">Previous</string>
 
     <string name="day_fragment_hello">Hello dayfragment</string>
-    <string name="food_fragment_hello">Hello foodfragment.</string>
+    <string name="food_fragment_title">foodfragment title.</string>
     <string name="week_fragment_hello">Hello weekfragment.</string>
     <string name="shoppinglist_fragment_hello">Hello shoppinglistfragment.</string>
 </resources>

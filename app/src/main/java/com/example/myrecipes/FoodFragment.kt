@@ -32,7 +32,7 @@ class FoodFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.buttonSecond.setOnClickListener {
+        binding.previousButton.setOnClickListener {
             findNavController().navigate(R.id.action_FoodFragment_to_DayFragment)
         }
     }

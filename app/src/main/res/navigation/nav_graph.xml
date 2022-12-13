@@ -10,6 +10,9 @@
         android:name="com.example.myrecipes.DayFragment"
         android:label="@string/day_fragment_label"
         tools:layout="@layout/day_fragment">
+        <argument
+            android:name="dayId"
+            app:argType="long" />
         <action
             android:id="@+id/action_DayFragment_to_FoodFragment"
             app:destination="@id/food_fragment" />
@@ -19,7 +22,6 @@
         android:name="com.example.myrecipes.FoodFragment"
         android:label="@string/food_fragment_label"
         tools:layout="@layout/food_fragment">
-
         <action
             android:id="@+id/action_FoodFragment_to_DayFragment"
             app:destination="@id/day_fragment" />
@@ -29,6 +31,9 @@
         android:name="com.example.myrecipes.WeekFragment"
         android:label="@string/week_fragment_label"
         tools:layout="@layout/week_fragment">
+        <argument
+            android:name="dayId"
+            app:argType="long" />
         <action
             android:id="@+id/action_week_fragment_to_day_fragment"
             app:destination="@id/day_fragment" />
@@ -36,10 +41,13 @@
     <fragment
         android:id="@+id/shoppinglist_fragment"
         android:name="com.example.myrecipes.ShoppingListFragment"
-        android:label="@string/week_fragment_label"
+        android:label="@string/shoppinglist_fragment_label"
         tools:layout="@layout/week_fragment">
+        <argument
+            android:name="weekId"
+            app:argType="long" />
         <action
-            android:id="@+id/action_shoppinglist_fragment_to_day_fragment"
-            app:destination="@id/day_fragment" />
+            android:id="@+id/action_shoppinglist_fragment_to_week_fragment"
+            app:destination="@id/week_fragment" />
     </fragment>
 </navigation>

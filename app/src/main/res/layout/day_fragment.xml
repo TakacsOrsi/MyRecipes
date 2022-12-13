@@ -5,16 +5,60 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DayFragment">
-
     <TextView
-        android:id="@+id/textview_first"
+        android:id="@+id/day_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/day_fragment_hello"
-        app:layout_constraintBottom_toTopOf="@id/button_first"
+        android:text="dayname"
+        app:layout_constraintBottom_toTopOf="@id/breakfast_textview"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/breakfast_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="breakfast"
+        app:layout_constraintBottom_toTopOf="@id/brunch_textview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/day_textview" />
+<TextView
+        android:id="@+id/brunch_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="brunch"
+        app:layout_constraintBottom_toTopOf="@id/lunch_textview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/breakfast_textview" />
+<TextView
+        android:id="@+id/lunch_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="lunch"
+        app:layout_constraintBottom_toTopOf="@id/snack_textview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/brunch_textview" />
+<TextView
+        android:id="@+id/snack_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="snack"
+        app:layout_constraintBottom_toTopOf="@id/dinner_textview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/lunch_textview" />
+<TextView
+        android:id="@+id/dinner_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="dinner"
+        app:layout_constraintBottom_toTopOf="@id/button_first"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/snack_textview" />
 
     <Button
         android:id="@+id/button_first"
@@ -24,5 +68,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textview_first" />
+        app:layout_constraintTop_toBottomOf="@id/dinner_textview" />
 </androidx.constraintlayout.widget.ConstraintLayout>

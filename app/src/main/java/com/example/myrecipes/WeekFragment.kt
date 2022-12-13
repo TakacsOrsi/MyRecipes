@@ -6,25 +6,45 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.myrecipes.databinding.WeekFragmentBinding
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
  */
+//TODO menüből navigálok a weekre, a visszafelé historyt kiszedni a navigációból(?), nap választással lehessen navigálni
 class WeekFragment : Fragment() {
 
     private var _binding:WeekFragmentBinding? = null
-
+    private val itemsList = ArrayList<String>()
+    private lateinit var customAdapter: CustomAdapter
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
+    private fun prepareItems() {
+        itemsList.add("Hétfő")
+        itemsList.add("Kedd")
+        itemsList.add("Szerda")
+        itemsList.add("Csütörtök")
+        itemsList.add("Péntek")
+        itemsList.add("Szombat")
+        itemsList.add("Vasárnap")
+        customAdapter.notifyDataSetChanged()
 
+    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
         _binding = WeekFragmentBinding.inflate(inflater, container, false)
+        val recyclerView: RecyclerView = binding.recyclerView
+        customAdapter = CustomAdapter(itemsList)
+        val layoutManager = LinearLayoutManager(context)
+        recyclerView.layoutManager = layoutManager
+        recyclerView.adapter = customAdapter
+        prepareItems()
         return binding.root
 
     }
