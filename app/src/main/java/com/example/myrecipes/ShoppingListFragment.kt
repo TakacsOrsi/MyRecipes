@@ -34,7 +34,7 @@ class ShoppingListFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.previousButton.setOnClickListener {
-            findNavController().navigate(R.id.action_FoodFragment_to_DayFragment)
+            findNavController().navigate(R.id.action_shoppinglist_fragment_to_week_fragment)
         }
     }
 

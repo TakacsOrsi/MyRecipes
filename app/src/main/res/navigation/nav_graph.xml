@@ -22,6 +22,9 @@
         android:name="com.example.myrecipes.FoodFragment"
         android:label="@string/food_fragment_label"
         tools:layout="@layout/food_fragment">
+        <argument
+            android:name="dayId"
+            app:argType="long" />
         <action
             android:id="@+id/action_FoodFragment_to_DayFragment"
             app:destination="@id/day_fragment" />
